@@ -14,8 +14,11 @@ source:
 build:
   number: 0
   script:
-    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-    - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+    content:
+      - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+      - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+    env:
+      OPENSSL_DIR: ${{ env.get(\"MYVAR\") }}
   skip:
     - win
 
