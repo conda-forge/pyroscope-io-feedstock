@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.0.4"
+  version: "1.0.6"
 
 package:
   name: pyroscope-io
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyroscope-io/pyroscope_io-${{ version }}.tar.gz
-  sha256: b191ce8e2445e34591f250a23c1fa03e3b7a6ce0cf461fdf4f1a21bfd1c7da40
+  sha256: bf6b37cb0639fc07c325d000fc6ff649bb19a8a61ef9633dfb5945054ec54084
 
 build:
-  number: 1
+  number: 0
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
