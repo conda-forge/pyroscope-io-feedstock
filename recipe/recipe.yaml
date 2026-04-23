@@ -14,11 +14,8 @@ source:
 build:
   number: 0
   script:
-    content:
-      - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-      - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
-    env:
-      OPENSSL_DIR: ${{ env.get("PREFIX") }}
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
   skip:
     - win
 
