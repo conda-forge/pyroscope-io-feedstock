@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.0.6"
+  version: "1.0.8"
 
 package:
   name: pyroscope-io
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyroscope-io/pyroscope_io-${{ version }}.tar.gz
-  sha256: bf6b37cb0639fc07c325d000fc6ff649bb19a8a61ef9633dfb5945054ec54084
+  sha256: 993f40a7e220a016186b00cf9877efdce46893ea5436f10d7dfe0905095bfed0
 
 build:
   number: 0
